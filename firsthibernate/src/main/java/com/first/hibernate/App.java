@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.first.hibernate.entity.Employee;
+import com.first.hibernate.model.ImageModel;
 
 /**
  * Hello world!
@@ -20,12 +21,17 @@ public class App
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-        Employee host = new Employee(2, "Mustafa");
+        Employee host = new Employee(4, "Mustafa");
         session.save(host);
 
         session.getTransaction().commit();
         session.close();
 
         sessionFactory.close();
+        
+        ImageModel model = new ImageModel();
+ model.saveImage();
+ System.out.println("image saved successfully");
+        
     }
 }

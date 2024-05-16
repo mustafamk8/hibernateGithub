@@ -21,6 +21,7 @@
 
         <!-- Mention the annotated entity class -->
         <mapping class="com.first.hibernate.entity.Employee" />
+        <mapping class="com.first.hibernate.entity.Image" />
 
     </session-factory>
 </hibernate-configuration>
