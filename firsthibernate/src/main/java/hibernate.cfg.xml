@@ -15,6 +15,8 @@
 
         <!-- Echo all executed SQL to stdout -->
         <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        
 
         <!-- Drop and re-create the database schema on startup -->
         <property name="hibernate.hbm2ddl.auto">update</property>
@@ -23,6 +25,8 @@
         <mapping class="com.first.hibernate.entity.Employee" />
         <mapping class="com.first.hibernate.entity.Image" />
         <mapping class="com.first.hibernate.entity.Customer" />
+        <mapping class="com.first.hibernate.entity.Question" />
+        <mapping class="com.first.hibernate.entity.Answer" />
 
     </session-factory>
 </hibernate-configuration>
